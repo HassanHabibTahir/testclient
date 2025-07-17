@@ -11,11 +11,10 @@ import { useEffect } from "react"
 export default function HomePage() {
   const { user, logout, isLoading } = useAuth()
   const router = useRouter()
-console.log(user,"user")
   useEffect(() => {
-    // if (!isLoading && !user) {
-    //   router.push("/login")
-    // }
+    if (!isLoading && !user) {
+      router.push("/login")
+    }
   }, [user, isLoading, router])
 
   if (isLoading) {
