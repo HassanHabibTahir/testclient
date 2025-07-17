@@ -140,6 +140,7 @@ export default function EditProfilePage() {
               <div className="space-y-2">
                 <Label htmlFor="email">Email *</Label>
                 <Input
+                 readOnly={true}
                   id="email"
                   name="email"
                   type="email"

@@ -64,8 +64,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   const updateUser = (userData: User) => {
-    // setUser(userData)
-    console.log(updateUser,"updateUser")
+    setUser(userData)
   }
 
   return (
