@@ -58,15 +58,14 @@ export default function EditProfilePage() {
       const response = await userAPI.updateProfile(token, {
         username: formData.username,
         email: formData.email,
-        firstName: formData.firstname || null,
-        lastName: formData.lastname || null,
+        firstname: formData.firstname || null,
+        lastname: formData.lastname || null,
         phone: formData.phone || null,
         address: formData.address || null,
       })
 
       if (response) {
-        console.log(response,"response")
-        updateUser(response?.data)
+        updateUser(response?.user)
         setSuccess(true)
         setTimeout(() => setSuccess(false), 3000)
       } else {

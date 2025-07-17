@@ -6,8 +6,8 @@ export interface User {
   password?: string
   address: string | null
   phone: string | null
-  firstName: string | null
-  lastName: string | null
+  firstname: string | null
+  lastname: string | null
 }
 
 export interface AuthResponse {
@@ -23,6 +23,7 @@ export interface ApiResponse<T = unknown> {
   message: string
   error?:string
   data?: T
+  user:User
 }
 
 // Auth APIs

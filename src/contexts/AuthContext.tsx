@@ -36,7 +36,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const fetchUserProfile = async (authToken: string) => {
     try {
       const response = await userAPI.getProfile(authToken)
-      console.log(response,"response==>")
       if (response) {
        setUser(response as unknown as User); 
       } else {

@@ -43,8 +43,8 @@ export default function SignupPage() {
         username: formData.username,
         email: formData.email,
         password: formData.password,
-        firstName: formData.firstname || null,
-        lastName: formData.lastname || null,
+        firstname: formData.firstname || null,
+        lastname: formData.lastname || null,
         phone: formData.phone || null,
         address: formData.address || null,
       })
