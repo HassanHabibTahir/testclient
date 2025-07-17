@@ -53,8 +53,8 @@ export default function ChangePasswordPage() {
 
     try {
       const response = await userAPI.changePassword(token, {
-        currentPassword: formData.currentPassword,
-        newPassword: formData.newPassword,
+        currentPassword: formData.currentPassword?.trim(),
+        newPassword: formData.newPassword.trim(),
       })
 
       if (response) {   
@@ -77,7 +77,7 @@ export default function ChangePasswordPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value?.trim(),
     }))
   }
 
